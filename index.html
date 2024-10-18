@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Add Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Assesment Speecbee</title>
+    <!-- Add tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+
+
+    <!-- Hidden User Details Div -->
+    
+        <div id="user__details" class=" mx-28 bg-white  p-4 rounded-lg shadow-lg mt-4">
+            <button class="close__popover-button text-slate-700 w-full text-end " onclick="closePopover()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex flex-wrap gap-4 ">
+                <div class="user__personal__details flex flex-wrap p-4 ">
+                    <div class="user__popover-image justify-center flex px-2 ">
+                        <img src="./assets/userImage.avif" alt="User Image" class="rounded-full h-28 w-28 "
+                            id="profile_pic">
+    
+                    </div>
+                    <div class="user__details__content  border-r-2 border-gray-300 px-4">
+                        <h2 class="user__popover-name font-bold text-xl pt-2">John doe</h2>
+    
+                        <p class="user__popover-designation font-semibold text-base pt-2 ">Chief Marketing Officer.</p>
+                        <p class="user__popover-organization text-slate-500">Speecbee</p>
+                        <div class="social__links gap-2 flex mt-2">
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="user__about__us   break-words flex-1 p-4">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam quae pariatur asperiores.
+                            Temporibus quam consequuntur fugit libero facilis? Quas nisi odio enim reprehenderit quibusdam
+                            corrupti praesentium facere aut dolores!
+                        </p>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+    
+
+    <div class="swiper-container h-5/6 relative w-100 max-w-screen-xl mx-auto ">
+        <!-- Add pagination and navigation buttons -->
+        <div class="swiper mySwiper   h-full   w-full align-middle px-14 ">
+            <div class="swiper-wrapper w-full   mx-auto max-w-screen-xl">
+                <!-- Card 1 -->
+                <div class="swiper-slide h-64 bg-white shadow-lg rounded-lg  py-2 cursor-pointer text-center"
+                    onclick="showDetails(1,'John doe', './assets/userImage.avif', 'Chief Marketing Officer', 'Speecbee','Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas.')">
+                    <div class="user__image justify-center flex p-4">
+                        <img src="./assets/userImage.avif" alt="User Image" class="rounded-full h-20 w-20 ">
+
+                    </div>
+                    <div class="slider__card-content">
+                        <h2 class="user-name font-bold text-xl pt-2">John doe</h2>
+
+                        <p class="user-designation font-semibold text-base pt-2 ">Chief Marketing Officer.</p>
+                        <p class="user-organization text-slate-500">Speecbee</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="swiper-slide h-64 bg-white shadow-lg rounded-lg  py-2 cursor-pointer text-center"
+                    onclick="showDetails(2,'Shubham', './assets/userImage2.avif', 'Chief Technical Officer', 'Coox','Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam quae pariatur asperiores. Temporibus quam consequuntur fugit libero facilis? Quas nisi odio enim reprehenderit quibusdam corrupti praesentium facere aut dolores!')">
+                    <div class="user__image justify-center flex p-4">
+                        <img src="./assets/userImage2.avif" alt="User Image" class="rounded-full h-20 w-20 ">
+
+                    </div>
+                    <div class="slider__card-content">
+                        <h2 class="user_name font-bold text-xl pt-2">Shubham</h2>
+
+                        <p class="user-designation font-semibold text-base pt-2 ">Chief Technical Officer</p>
+                        <p class="user-organization text-slate-500">Coox</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide h-64 bg-white shadow-lg rounded-lg  py-2 cursor-pointer text-center"
+                    onclick="showDetails(3,'Aarchi', './assets/userImage3.avif', 'Chief Enagagement Officer', 'jellyfish','Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas.')">
+                    <div class="user__image justify-center flex p-4">
+                        <img src="./assets/userImage3.avif" alt="User Image" class="rounded-full h-20 w-20 ">
+
+                    </div>
+                    <div class="slider__card-content">
+                        <h2 class="user_name font-bold text-xl pt-2">Aarchi</h2>
+
+                        <p class="user-designation font-semibold text-base pt-2 ">Chief Enagagement Officer</p>
+                        <p class="user-organization text-slate-500">Jellyfish</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide h-64 bg-white shadow-lg rounded-lg  py-2 cursor-pointer text-center"
+                    onclick="showDetails(4,'Alex', './assets/userImage4.avif', 'Chief Marketing Officer', 'cyfuture','Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas.')">
+                    <div class="user__image justify-center flex p-4">
+                        <img src="./assets/userImage4.avif" alt="User Image" class="rounded-full h-20 w-20 ">
+
+                    </div>
+                    <div class="slider__card-content">
+                        <h2 class="user_name font-bold text-xl pt-2">Alex</h2>
+
+                        <p class="user-designation font-semibold text-base pt-2 ">Chief Marketing Officer</p>
+                        <p class="user-organization text-slate-500">Cyfuture</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- Add Navigation -->
+        <div
+            class="swiper-button-prev hidden sm:flex rounded-full border-2 justify-center  border-slate-4  h-8 w-8 text-slate-200">
+        </div>
+        <div
+            class="swiper-button-next hidden sm:flex rounded-full border-2  justify-center  border-slate-4  h-8 w-8 text-slate-200">
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- Linking swiperjs script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Linking custom script of swiper -->
+    <script src="./script.js"></script>
+    <!-- Linking popover script -->
+    <script src="./popOver.js"></script>
+
+</body>
+
+</html>
